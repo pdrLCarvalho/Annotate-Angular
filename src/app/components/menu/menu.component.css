@@ -46,9 +46,10 @@ header {
 
 .menu-items{
     display: flex;
+    align-items: center;
     gap: 20px;
     width: 100%;
-    padding: 15px 0;
+    height: 60px;
     padding-left: 20px;
     position: relative;
 }
@@ -109,4 +110,39 @@ hr {
 
 .menu-items.active .menu-lateral{
     background-color: #2985e8;
+}
+
+.activity-area{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mark{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    display: none;
+}
+
+.menu-items:hover .mark.normal{
+    background-color: #2985e8;
+    display: flex;
+}
+
+.menu-items:hover .mark.medium{
+    background-color: orange;
+    display: flex;
+}
+
+.menu-items:hover .mark.important{
+    background-color: red;
+    display: flex;
 }
