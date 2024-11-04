@@ -106,3 +106,7 @@ hr {
     border: none;
     cursor: pointer;
 }
+
+.menu-items.active .menu-lateral{
+    background-color: #2985e8;
+}
