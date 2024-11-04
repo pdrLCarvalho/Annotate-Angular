@@ -146,3 +146,18 @@ hr {
     background-color: red;
     display: flex;
 }
+
+.menu-items.active .mark.normal{
+    background-color: #2985e8;
+    display: flex;
+}
+
+.menu-items.active .mark.medium{
+    background-color: orange;
+    display: flex;
+}
+
+.menu-items.active .mark.important{
+    background-color: red;
+    display: flex;
+}
