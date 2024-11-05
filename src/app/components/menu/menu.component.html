@@ -1,70 +1,60 @@
-<header>
-  <div class="user-container">
+<header
+  *ngIf="screenWidth > 500; else responsiveScreen"
+  [ngClass]="expandedMenu ? 'expanded-header' : 'withdrawn-header'"
+>
+  <div
+    [ngClass]="
+      expandedMenu ? 'hamburger-menu-expanded' : 'hamburger-menu-withdrawn'
+    "
+  >
+    <i class="fa-solid fa-bars" (click)="changeMenuSize()"></i>
+  </div>
+
+  <div [ngClass]="expandedMenu ? 'user-container' : 'user-container-withdrawn'">
     <div class="perfil-img"></div>
-    <div>
+    <div *ngIf="expandedMenu">
       <p class="user-name">{{ nome }}</p>
       <p class="user-email">{{ email }}</p>
     </div>
   </div>
+
   <div class="menu">
-    <div class="menu-items">
-      <i class="fa-regular fa-calendar"></i>
-      <div class="activity-area">
-        <p>Meu dia</p>
-        <div class="mark normal">5</div>
+    <div *ngFor="let item of menuItems" class="menu-items">
+      <i [ngClass]="item.icon"></i>
+      <div [ngClass]="expandedMenu ? 'activity-area' : 'text-none'">
+        <p>{{ item.text }}</p>
+        <div class="mark" [ngClass]="item.mark">{{ item.count }}</div>
       </div>
       <div class="menu-lateral"></div>
-    </div>
-
-    <div class="menu-items">
-      <i class="fa-solid fa-circle-exclamation"></i>
-      <div class="activity-area">
-        <p>Importante</p>
-        <div class="mark important">3</div>
-      </div>
-      <div class="menu-lateral"></div>
-    </div>
-
-    <div class="menu-items active">
-      <i class="fa-regular fa-clock"></i>
-      <div class="activity-area">
-        <p>Planejado</p>
-        <div class="mark medium">4</div>
-      </div>
-      <div class="menu-lateral"></div>
-    </div>
-
-    <div class="menu-items">
-      <i class="fa-solid fa-list-check"></i>
-      <div class="activity-area">
-        <p>Tarefas</p>
-        <div class="mark normal">1</div>
-      </div>
-      <div class="menu-lateral"></div>
-    </div>
-
-    <hr />
-
-    <div class="menu-items">
-      <i class="fa-solid fa-store"></i>
-      <p>Lista de compras</p>
-      <div class="menu-lateral"></div>
-    </div>
-
-    <div class="menu-items">
-      <i class="fa-regular fa-handshake"></i>
-      <p>Reuniões</p>
-      <div class="menu-lateral"></div>
-    </div>
-
-    <div class="addList">
-      <button class="btn_newList">
-        <i class="fa-solid fa-plus"></i>
-        <p>Nova Lista</p>
-      </button>
-      <button class="btn_newGroup">
-        <i class="fa-solid fa-layer-group"></i>
-      </button>
     </div>
   </div>
 </header>
+
+<ng-template #responsiveScreen>
+  <div class="menu-template-responsive">
+    <div class="menu-responsive">
+      <i class="fa-solid fa-bars" (click)="showResponsiveMenu()"></i>
+    </div>
+    <div
+      *ngIf="checkResponsive"
+      [ngClass]="expandedMenu ? 'user-container' : 'user-container-withdrawn'"
+    >
+      <div class="perfil-img"></div>
+      <div *ngIf="expandedMenu">
+        <p class="user-name">{{ nome }}</p>
+        <p class="user-email">{{ email }}</p>
+      </div>
+    </div>
+
+    <div class="menu" *ngIf="checkResponsive">
+      <div *ngFor="let item of menuItems" class="menu-items">
+        <i [ngClass]="item.icon"></i>
+        <div [ngClass]="expandedMenu ? 'activity-area' : 'text-none'">
+          <p>{{ item.text }}</p>
+          <div class="mark" [ngClass]="item.mark">{{ item.count }}</div>
+        </div>
+        <div class="menu-lateral"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>

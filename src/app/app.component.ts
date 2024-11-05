@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Annotate';
+  username: string = 'odairmichael'
+  items = {
+    title: 'Celular',
+    price: 129.80,
+    description: 'Celular bonito'
+  }
 }
