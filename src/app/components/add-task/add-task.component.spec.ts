@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuComponent } from './menu.component';
+import { AddTaskComponent } from './add-task.component';
 
-describe('MenuComponent', () => {
-  let component: MenuComponent;
-  let fixture: ComponentFixture<MenuComponent>;
+describe('AddTaskComponent', () => {
+  let component: AddTaskComponent;
+  let fixture: ComponentFixture<AddTaskComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MenuComponent]
+      declarations: [AddTaskComponent]
     });
-    fixture = TestBed.createComponent(MenuComponent);
+    fixture = TestBed.createComponent(AddTaskComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

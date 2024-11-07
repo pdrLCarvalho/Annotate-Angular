@@ -1,0 +1,23 @@
+<form action="" class="task-bar" [formGroup]="annotationForm">
+  <div class="annotation">
+    <p>Anotação</p>
+    <input
+      type="text"
+      placeholder="O que precisa anotar?"
+      formControlName="annotation"
+    />
+  </div>
+  <div class="date">
+    <p>Data</p>
+    <input type="date" placeholder="Add dates" formControlName="date" />
+  </div>
+  <div class="filter">
+    <p>Filtro</p>
+    <input
+      type="text"
+      placeholder="Adicione um filtro"
+      formControlName="filter"
+    />
+  </div>
+  <button class="task-add-btn">+</button>
+</form>

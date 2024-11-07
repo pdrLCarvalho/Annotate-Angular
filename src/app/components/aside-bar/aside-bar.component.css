@@ -1,0 +1,72 @@
+.aside-menu {
+  display: inline-block;
+  background-color: var(--aside-bar);
+  position: relative;
+  height: 100vh;
+}
+.contract {
+  width: 40px;
+}
+.contract > .aside-list {
+  display: none;
+}
+.open {
+  width: 215px;
+  color: var(--w1);
+}
+.contract > .btn-expand {
+  transform: rotate(-180deg);
+}
+.contract > .btn-expand:hover {
+  transform: rotate(360deg);
+  background-color: var(--oceanBlue);
+}
+.open > .btn-expand {
+  transform: rotate(360deg);
+}
+.open > .btn-expand:hover {
+  transform: rotate(-180deg);
+  background-color: var(--oceanBlue);
+}
+.btn-expand {
+  position: absolute;
+  top: calc(100vh / 2);
+  right: -33px;
+  content: url("/assets/expand.svg");
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--aside-bar);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.open > .aside-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.aside-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+.aside-account p {
+  margin-bottom: 0px;
+}
+.aside-item {
+  list-style: none;
+  padding: 10px 32px;
+  cursor: pointer;
+}
+.aside-item a {
+  color: var(--w1);
+  text-decoration: none;
+}
+.aside-item:not(:first-child):hover {
+  background-color: var(--oceanBlue);
+}
