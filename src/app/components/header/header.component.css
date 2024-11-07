@@ -1,0 +1,9 @@
+.header {
+  display: block;
+  margin: 22px 32px;
+}
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
