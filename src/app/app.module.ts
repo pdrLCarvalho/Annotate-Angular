@@ -10,6 +10,7 @@ import { AsideBarComponent } from './components/aside-bar/aside-bar.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TasksAreaComponent } from './components/tasks-area/tasks-area.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TasksAreaComponent } from './components/tasks-area/tasks-area.component
     MainComponent,
     HeaderComponent,
     TasksAreaComponent,
+    SignUpComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],

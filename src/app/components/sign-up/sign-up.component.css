@@ -8,28 +8,6 @@
     gap: 20px;
 }
 
-.logo{
-    width: 150px;
-    height: 30px;
-}
-
-.display{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.display-img1{
-    height: 400px;
-    width: 250px;
-    margin-top: 280px;
-}
-
-.display-img2{
-    height: 400px;
-    margin-top: 280px;
-}
-
 .login-form{
     color: white;
     background-color: #191919;
@@ -55,7 +33,6 @@
 .input-box{
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
     gap: 3px;
 }
 
@@ -67,39 +44,19 @@
     font-size: 12px;
 }
 
-.label{
-    margin-left: 10px;
-}
-
 .btn{
     height: 30px;
     width: 150px;
 }
 
-.text-link{
-    color: #fff;
-    font-size: 9px;
-}
-
-.text-link a{
-    color: #fff;
-}
-
 .login-text{
-    font-size: 25px;
-}
-
-.line{
-    border: 0.5px solid #7a7a7a;
-    opacity: 57%;
-    width: 200px;
-    margin-top: 15px;
+    font-size: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 991px){
     .login-form{
         width: 325px;
-        height: 325px;
+        height: 300px;
         justify-content: center;
         gap: 10px
     }
@@ -110,15 +67,6 @@
 
     .login-text{
         font-size: 20px;
-    }
-
-    .text-link{
-        font-size: 12px;
-    }
-
-    .forgot-pass{
-        align-self: end;
-        margin-right: 15px;
     }
 
     .btn{
@@ -135,22 +83,13 @@
 @media (min-width: 992px)  {
 	.login-form{
         width: 350px;
-        height: 350px;
+        height: 300px;
         justify-content: center;
         gap: 20px
     }
 
     .input{
         width: 300px;
-    }
-
-    .text-link{
-        font-size: 12px;
-    }
-
-    .forgot-pass{
-        align-self: end;
-        margin-right: 30px;
     }
 
     .btn{
