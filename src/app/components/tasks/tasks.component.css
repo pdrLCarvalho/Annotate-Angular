@@ -1,73 +1,82 @@
-.task-bar {
+.task-section {
+  margin-top: 74px;
+  text-align: center;
+}
+.filter-title {
+  font-size: 3rem;
+}
+.task-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.task {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: var(--w1);
-  max-width: 1144px;
   border-radius: 20px;
   align-items: start;
   border: 1px solid var(--gray-white);
 }
-
-.task-bar div {
+.task div {
   border-radius: inherit;
   padding: 0.8rem 1.5rem;
   transition: background 250ms ease;
 }
 
-.task-bar div:hover {
+.task div:hover {
   background: hsl(0 0% 94%);
 }
-
 input[type="text"],
-input[type="date"],
-select {
+input[type="date"] {
   background: none;
   border: none;
   padding: 0.2rem 0 0 0;
 }
-
 input[type="text"]:focus,
-input[type="date"]:focus,
-select:focus {
+input[type="date"]:focus {
   outline: none;
 }
-.alert {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
-  background-color: var(--pale-red);
-  border-radius: 20px;
-  max-width: 1144px;
-
-  margin-bottom: 32px;
+.task-check {
+  display: inline-block;
+  margin-right: 16px;
+  -webkit-appearance: none;
+  background-color: var(--w1);
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
   border: 1px solid var(--border-list);
 }
-::placeholder {
-  font-size: 0.75rem;
-}
-.task-add-btn {
+.task-delete-btn {
   margin: 16px;
   align-self: flex-end;
   color: var(--w1);
-  background-color: var(--oceanBlue);
+  background-color: var(--pale-red);
   width: 40px;
   height: 40px;
   border-radius: 100%;
   border: 1px solid var(--border-list);
   cursor: pointer;
 }
+input[type="checkbox"]:checked {
+  background-color: var(--oceanBlue);
+}
+
 @media (min-width: 800px) {
-  .task-bar {
+  .task {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 80px;
+    width: 1144px;
     /* margin: 80px 172px; */
   }
+  .task-section {
+    margin-top: 74px;
 
-  .alert {
-    margin: 80px 172px;
+    text-align: start;
   }
 }

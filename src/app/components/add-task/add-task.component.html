@@ -1,3 +1,6 @@
+<div *ngIf="setAlert" class="alert">
+  Dados não foram preenchidos corretamente
+</div>
 <form action="" class="task-bar" [formGroup]="annotationForm">
   <div class="annotation">
     <p>Anotação</p>
@@ -13,11 +16,19 @@
   </div>
   <div class="filter">
     <p>Filtro</p>
-    <input
+    <select formControlName="filter">
+      <option value="">Selecione filtro</option>
+
+      <option *ngFor="let filter of filters" [value]="filter">
+        {{ filter }}
+      </option>
+    </select>
+    <!-- <input
       type="text"
       placeholder="Adicione um filtro"
       formControlName="filter"
-    />
+    /> -->
   </div>
-  <button class="task-add-btn">+</button>
+
+  <button class="task-add-btn" (click)="onSubmit()">+</button>
 </form>

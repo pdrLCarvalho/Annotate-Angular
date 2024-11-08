@@ -1,0 +1,22 @@
+<section class="task-section">
+  <h1 class="filter-title">{{ title }}</h1>
+  <ul class="task-list">
+    <li class="task">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input
+          class="annotation-input"
+          type="text"
+          placeholder="O que precisa anotar?"
+          formControlName="annotation"
+        />
+      </div>
+      <div class="date">
+        <input type="date" placeholder="Add dates" formControlName="date" />
+      </div>
+      <button class="task-delete-btn">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+    </li>
+  </ul>
+</section>
