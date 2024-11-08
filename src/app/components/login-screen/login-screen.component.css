@@ -1,165 +1,163 @@
-.body{
-    background-color: #A6C7E6;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+.body {
+  background-color: #a6c7e6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: 30px;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.display-img1 {
+  height: 400px;
+  width: 250px;
+}
+
+.display-img2 {
+  height: 400px;
+}
+
+.login-form {
+  color: white;
+  background-color: #191919;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #191919;
+  color: white;
+  border: none;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  gap: 3px;
+}
+
+.input {
+  border-radius: 36px;
+  height: 30px;
+  width: 200px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.label {
+  margin-left: 10px;
+}
+
+.btn {
+  height: 30px;
+  width: 150px;
+}
+
+.text-link {
+  color: #fff;
+  font-size: 9px;
+}
+
+.text-link a {
+  color: #fff;
+}
+
+.login-text {
+  font-size: 25px;
+}
+
+.line {
+  border: 0.5px solid #7a7a7a;
+  opacity: 57%;
+  width: 200px;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .login-form {
+    width: 325px;
+    height: 325px;
     justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
+    gap: 10px;
+  }
 
-.logo{
-    width: 150px;
-    height: 30px;
-}
+  .input {
+    width: 275px;
+  }
 
-.display{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
+  .login-text {
+    font-size: 20px;
+  }
 
-.display-img1{
-    height: 400px;
-    width: 250px;
-    margin-top: 280px;
-}
-
-.display-img2{
-    height: 400px;
-    margin-top: 280px;
-}
-
-.login-form{
-    color: white;
-    background-color: #191919;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 36px;
-    flex-direction: column;
-}
-
-.form-control{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #191919;
-    color: white;
-    border: none;
-}
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-    gap: 3px;
-}
-
-.input{
-    border-radius: 36px;
-    height: 30px;
-    width: 200px;
-    padding-left: 10px;
+  .text-link {
     font-size: 12px;
-}
+  }
 
-.label{
-    margin-left: 10px;
-}
+  .forgot-pass {
+    align-self: end;
+    margin-right: 15px;
+  }
 
-.btn{
+  .btn {
     height: 30px;
-    width: 150px;
+    width: 175px;
+  }
+
+  .line {
+    width: 250px;
+    margin-top: 20px;
+  }
 }
 
-.text-link{
-    color: #fff;
-    font-size: 9px;
-}
+@media (min-width: 992px) {
+  .login-form {
+    width: 350px;
+    height: 350px;
+    justify-content: center;
+    gap: 20px;
+  }
 
-.text-link a{
-    color: #fff;
-}
+  .input {
+    width: 300px;
+  }
 
-.login-text{
-    font-size: 25px;
-}
+  .text-link {
+    font-size: 12px;
+  }
 
-.line{
-    border: 0.5px solid #7a7a7a;
-    opacity: 57%;
+  .forgot-pass {
+    align-self: end;
+    margin-right: 30px;
+  }
+
+  .btn {
+    height: 30px;
     width: 200px;
-    margin-top: 15px;
-}
+  }
 
-@media (min-width: 768px) and (max-width: 991px){
-    .login-form{
-        width: 325px;
-        height: 325px;
-        justify-content: center;
-        gap: 10px
-    }
-
-    .input{
-        width: 275px;
-    }
-
-    .login-text{
-        font-size: 20px;
-    }
-
-    .text-link{
-        font-size: 12px;
-    }
-
-    .forgot-pass{
-        align-self: end;
-        margin-right: 15px;
-    }
-
-    .btn{
-        height: 30px;
-        width: 175px;
-    }
-
-    .line{
-        width: 250px;
-        margin-top: 20px;
-    }
-}
-
-@media (min-width: 992px)  {
-	.login-form{
-        width: 350px;
-        height: 350px;
-        justify-content: center;
-        gap: 20px
-    }
-
-    .input{
-        width: 300px;
-    }
-
-    .text-link{
-        font-size: 12px;
-    }
-
-    .forgot-pass{
-        align-self: end;
-        margin-right: 30px;
-    }
-
-    .btn{
-        height: 30px;
-        width: 200px;
-    }
-
-    .line{
-        width: 275px;
-        margin-top: 30px;
-    }
+  .line {
+    width: 275px;
+    margin-top: 30px;
+  }
 }
