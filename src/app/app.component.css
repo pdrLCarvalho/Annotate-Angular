@@ -1,6 +1,6 @@
 .layout-container {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
 .layout-content {
   display: flex;
