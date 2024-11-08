@@ -1,18 +1,13 @@
 <section class="task-section">
   <h1 class="filter-title">{{ title }}</h1>
   <ul class="task-list">
-    <li class="task">
+    <li class="task" *ngFor="let task of arrtasks">
       <div class="annotation">
         <input type="checkbox" class="task-check" />
-        <input
-          class="annotation-input"
-          type="text"
-          placeholder="O que precisa anotar?"
-          formControlName="annotation"
-        />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
-        <input type="date" placeholder="Add dates" formControlName="date" />
+        <input type="date" [value]="task.date" />
       </div>
       <button class="task-delete-btn">
         <img src="assets/delete.svg" alt="" srcset="" />

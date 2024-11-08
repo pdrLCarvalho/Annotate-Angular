@@ -32,9 +32,11 @@ export class AddTaskComponent {
   onSubmit() {
     if (this.isValid()) {
       this.apiHandler.create(this.annotationForm);
-      this.apiHandler.getAll();
     } else {
       this.setAlert = true;
+      setTimeout(() => {
+        this.setAlert = false;
+      }, 4000);
     }
   }
   isValid() {
