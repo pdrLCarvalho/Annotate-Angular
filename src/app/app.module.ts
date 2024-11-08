@@ -11,6 +11,8 @@ import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TasksAreaComponent } from './components/tasks-area/tasks-area.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TasksComponent } from './components/tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HeaderComponent,
     TasksAreaComponent,
     SignUpComponent,
+    TasksComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
