@@ -26,5 +26,6 @@ export class AsideBarComponent {
 
   logout() {
     this.databaseservice.userLogged = null
+    this.databaseservice.currentPage = "LOGIN"
   }
 }

@@ -3,12 +3,12 @@ export interface User {
     name: string
     email: string
     password: string
-    tasks: Tasks
+    tasks?: Tasks[]
 }
 interface Tasks {
-    importante: string[]
-    trabalho: string[]
-    estudos: string[]
-    lazer: string[]
-    compras: string[]
+    importante?: string[]
+    trabalho?: string[]
+    estudos?: string[]
+    lazer?: string[]
+    compras?: string[]
 }
