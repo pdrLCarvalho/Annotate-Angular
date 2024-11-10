@@ -1,5 +1,10 @@
-.container-app{
-    width: 100vw;
-    display: flex;
-    background-color: red;
+.layout-container {
+  display: flex;
+  justify-content: center;
+}
+.layout-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--bg);
 }

@@ -1,0 +1,55 @@
+<section class="body">
+    <img class="logo" src="assets/ANNOTATE.svg" alt="" />
+  
+    <section class="login-form">
+      <p class="d-none d-md-block login-text">Sign up access your account</p>
+  
+      <form 
+      [formGroup]="form" 
+      class="form-control"
+      (ngSubmit)="onSubmit()"
+      >
+
+        <div class="input-box mb-3">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input"
+            placeholder="Name"
+            formControlName="name"
+          />
+        </div>
+        
+        <div class="input-box mb-3">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input"
+            placeholder="Email"
+            formControlName="email"
+          />
+        </div>
+  
+        <div class="input-box mb-1">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="input"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </div>
+  
+        <button
+          class="btn btn-primary d-flex justify-content-center align-items-center mt-3"
+          [disabled]="form.invalid"
+        >
+          Sign Up
+        </button>
+      </form>
+    </section>
+  </section>
+  

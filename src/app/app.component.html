@@ -1,2 +1,12 @@
-    <!-- <app-menu></app-menu> -->
-    <app-login-screen></app-login-screen>
+<div *ngIf="!databaseservice.userLogged">
+  <app-login-screen></app-login-screen>
+</div>
+<!-- <app-sign-up></app-sign-up> -->
+
+<div class="layout-container" *ngIf="databaseservice.userLogged">
+  <app-aside-bar></app-aside-bar>
+  <div class="layout-content">
+    <app-header></app-header>
+    <app-main></app-main>
+  </div>
+</div>

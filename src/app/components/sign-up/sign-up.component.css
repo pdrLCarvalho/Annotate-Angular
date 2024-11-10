@@ -1,0 +1,104 @@
+.body{
+    background-color: #A6C7E6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form{
+    color: white;
+    background-color: #191919;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    flex-direction: column;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #191919;
+    color: white;
+    border: none;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.input{
+    border-radius: 36px;
+    height: 30px;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.btn{
+    height: 30px;
+    width: 150px;
+}
+
+.login-text{
+    font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .login-form{
+        width: 325px;
+        height: 300px;
+        justify-content: center;
+        gap: 10px
+    }
+
+    .input{
+        width: 275px;
+    }
+
+    .login-text{
+        font-size: 20px;
+    }
+
+    .btn{
+        height: 30px;
+        width: 175px;
+    }
+
+    .line{
+        width: 250px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px)  {
+	.login-form{
+        width: 350px;
+        height: 300px;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .input{
+        width: 300px;
+    }
+
+    .btn{
+        height: 30px;
+        width: 200px;
+    }
+
+    .line{
+        width: 275px;
+        margin-top: 30px;
+    }
+}
