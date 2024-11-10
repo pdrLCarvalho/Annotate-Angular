@@ -1,6 +1,7 @@
 <div *ngIf="setAlert" class="alert">
-  Dados não foram preenchidos corretamente
+  Dados não foram preenchidos corretamente.
 </div>
+<div *ngIf="saved" class="sent">Salvo com sucesso.</div>
 <form action="" class="task-bar" [formGroup]="annotationForm">
   <div class="annotation">
     <p>Anotação</p>

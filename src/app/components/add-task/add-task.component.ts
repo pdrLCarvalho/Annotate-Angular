@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -14,29 +14,30 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class AddTaskComponent {
   constructor(private apiHandler: ApiService) {}
+
   setAlert: boolean = false;
+  saved: boolean = false;
   filters: string[] = ['Importante', 'Trabalho', 'Estudos', 'Lazer', 'Compras'];
+  @Output() newTask: EventEmitter<boolean> = new EventEmitter();
+
   annotationForm: FormGroup = new FormGroup({
     annotation: new FormControl('', [Validators.required]),
     date: new FormControl('', [Validators.required]),
     filter: new FormControl(
       '',
-      Validators.compose([
-        Validators.minLength(5),
-        Validators.maxLength(300),
-        Validators.required,
-      ])
+
+      Validators.required
     ),
   });
 
   onSubmit() {
     if (this.isValid()) {
-      this.apiHandler.create(this.annotationForm);
+      this.apiHandler.create(this.annotationForm).subscribe(() => this.sent());
     } else {
       this.setAlert = true;
       setTimeout(() => {
         this.setAlert = false;
-      }, 4000);
+      }, 2000);
     }
   }
   isValid() {
@@ -45,5 +46,12 @@ export class AddTaskComponent {
     } else {
       return false;
     }
+  }
+  sent() {
+    this.saved = true;
+    this.newTask.emit(true);
+    setTimeout(() => {
+      this.saved = false;
+    }, 2000);
   }
 }
