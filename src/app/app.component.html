@@ -1,10 +1,19 @@
-<app-login-screen></app-login-screen>
-<!-- <app-sign-up></app-sign-up> -->
+<!-- <div *ngIf="!databaseservice.userLogged">
+  <app-login-screen></app-login-screen>
+</div> -->
 
-<!-- <div class="layout-container">
-  <app-aside-bar [user]="'Odair'"></app-aside-bar>
+<div *ngIf="databaseservice.currentPage == 'LOGIN' ">
+  <app-login-screen></app-login-screen>
+</div>
+
+<div *ngIf="databaseservice.currentPage == 'SIGNUP' ">
+  <app-sign-up></app-sign-up>
+</div>
+
+<div class="layout-container" *ngIf="databaseservice.userLogged">
+  <app-aside-bar></app-aside-bar>
   <div class="layout-content">
     <app-header></app-header>
     <app-main></app-main>
   </div>
-</div> -->
+</div> 

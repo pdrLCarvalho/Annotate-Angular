@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataBaseService } from './services/data-base.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(public databaseservice: DataBaseService) {}
+  
   title = 'Annotate';
   username: string = 'odairmichael'
   items = {

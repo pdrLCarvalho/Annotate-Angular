@@ -8,44 +8,29 @@
       <section class="login-form">
         <p class="d-none d-md-block login-text">Sign to access your account</p>
     
-        <form class="form-control">
+        <form class="form-control" [formGroup]="loginForm">
+
           <div class="input-box mb-3">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="input"
-              placeholder="Email"
-            />
+            <input type="email" id="email" name="email" class="input" placeholder="Email*" formControlName="email" value="odair@teste.com"/>
           </div>
     
           <div class="input-box mb-1">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="input"
-              placeholder="Password"
-            />
+            <input type="password" id="password" name="password" class="input" placeholder="Password*" formControlName="password" value="senha123"/>
           </div>
-    
+  
           <p class="text-link forgot-pass"><a href="#">Forgot your password?</a></p>
+          
+          <small class="mt-1 text-danger login-failed" *ngIf="loginNotFound">Please complete all required fields.</small>
+          <small class="mt-1 text-danger login-failed" *ngIf="userNotFound">User not found in our DB.</small>
 
-          <small class=" mt-1 text-danger login-failed">Login failed, please check <br> your email and password.</small>
     
-          <button
-            class="btn btn-primary d-flex justify-content-center align-items-center mt-3"
-          >
-            Sign In
-          </button>
-    
+          <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center mt-3" (click)="login()">Sign In</button>
+          
           <p class="line"></p>
     
-          <p class="text-link mt-3">
+          <p class="text-link mt-3" (click)="goToSignup()">
             Don't have an account? <a href="#">Sign up</a>
           </p>
-    
-          
         </form>
       </section>
     </div>

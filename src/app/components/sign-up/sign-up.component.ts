@@ -27,5 +27,9 @@ export class SignUpComponent {
     this.databaseservice.dataBase.push(profile)
 
     console.log(this.databaseservice.dataBase);
+
+    this.databaseservice.currentPage = "LOGIN"
   }
+
+
 }

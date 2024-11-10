@@ -95,7 +95,8 @@
 }
 
 .login-failed{
-  text-align: center;
+  width: 90%;
+  text-align: start;
   font-size: 12px;
 }
 
