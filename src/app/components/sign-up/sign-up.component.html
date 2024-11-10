@@ -4,7 +4,12 @@
     <section class="login-form">
       <p class="d-none d-md-block login-text">Sign up access your account</p>
   
-      <form class="form-control">
+      <form 
+      [formGroup]="form" 
+      class="form-control"
+      (ngSubmit)="onSubmit()"
+      >
+
         <div class="input-box mb-3">
           <input
             type="text"
@@ -12,6 +17,7 @@
             name="name"
             class="input"
             placeholder="Name"
+            formControlName="name"
           />
         </div>
         
@@ -22,6 +28,7 @@
             name="email"
             class="input"
             placeholder="Email"
+            formControlName="email"
           />
         </div>
   
@@ -32,11 +39,13 @@
             name="password"
             class="input"
             placeholder="Password"
+            formControlName="password"
           />
         </div>
   
         <button
           class="btn btn-primary d-flex justify-content-center align-items-center mt-3"
+          [disabled]="form.invalid"
         >
           Sign Up
         </button>
