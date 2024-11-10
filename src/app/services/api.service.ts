@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Annotation } from '../models/annotation';
 
@@ -7,25 +7,15 @@ import { Annotation } from '../models/annotation';
   providedIn: 'root',
 })
 export class ApiService {
+  constructor(private http: HttpClient) {}
   private url: string =
-    'https://crudcrud.com/api/30f93583029449d8996f2c96b989d0b4';
+    'https://crudcrud.com/api/8808553d7b5341569e60e546b2fb8bd3';
   private path: string = '/annotations';
 
-  constructor(private http: HttpClient) {}
-  tasks: Annotation[] = [];
   create(annotation: FormGroup) {
     const payload = annotation.getRawValue();
-    this.http.post(this.url + this.path, payload).subscribe({
-      next: (response) => {
-        console.log(response);
-      },
-      complete: () => {
-        console.log('feito');
-      },
-      error: (err) => {
-        console.error(err);
-      },
-    });
+
+    return this.http.post(this.url + this.path, payload);
   }
   getAll() {
     return this.http.get<Annotation[]>(this.url + this.path);
