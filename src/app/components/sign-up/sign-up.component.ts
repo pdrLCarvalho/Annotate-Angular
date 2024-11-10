@@ -24,12 +24,13 @@ export class SignUpComponent {
       password:String = this.form.value.password
     }
 
-    this.databaseservice.dataBase.push(profile)
-
-    console.log(this.databaseservice.dataBase);
-
     this.databaseservice.currentPage = "LOGIN"
+
+    this.databaseservice.users.push({
+      id: 3,
+      name: this.form.get('name')?.value,
+      email: this.form.get('email')?.value,
+      password: this.form.get('password')?.value
+    })
   }
-
-
 }
