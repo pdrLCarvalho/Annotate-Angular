@@ -1,21 +1,33 @@
-<aside
-  class="aside-menu"
-  [ngClass]="{ open: menuIsOpen, contract: !menuIsOpen }"
->
+<aside class="aside-menu" [ngClass]="{ open: menuIsOpen, contract: !menuIsOpen }">
   <ul class="aside-list">
     <li class="aside-item">
+      <app-time></app-time>
       <div class="aside-account">
         <img class="account-img" src="assets/account.svg" alt="" srcset="" />
         <p class="account-user">{{ user }}</p>
       </div>
     </li>
-    <li class="aside-item"><a href="#">Importante</a></li>
-    <li class="aside-item"><a href="#">Para hoje</a></li>
-    <li class="aside-item"><a href="#">Concluídas</a></li>
-    <li class="aside-item"><a href="#">Trabalho</a></li>
-    <li class="aside-item"><a href="#">Estudos</a></li>
-    <li class="aside-item"><a href="#">Lazer</a></li>
-    <li class="aside-item"><a href="#">Compras</a></li>
+    <li class="aside-item" (click)="setPage(filters.Importante)">
+      <a href="#">Importante</a>
+    </li>
+    <li class="aside-item" (click)="setPage(filters.Hoje)">
+      <a href="#">Para hoje</a>
+    </li>
+    <li class="aside-item">
+      <a href="#">Concluídas</a>
+    </li>
+    <li class="aside-item" (click)="setPage(filters.Estudos)">
+      <a href="#">Estudos</a>
+    </li>
+    <li class="aside-item" (click)="setPage(filters.Trabalho)">
+      <a href="#">Trabalho</a>
+    </li>
+    <li class="aside-item" (click)="setPage(filters.Lazer)">
+      <a href="#">Lazer</a>
+    </li>
+    <li class="aside-item" (click)="setPage(filters.Compras)">
+      <a href="#">Compras</a>
+    </li>
     <li class="aside-item" (click)="logout()"><a href="">Sair</a></li>
   </ul>
   <span class="btn-expand" (click)="openClose()"></span>
