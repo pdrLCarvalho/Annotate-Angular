@@ -9,7 +9,7 @@ import { Annotation } from '../models/annotation';
 export class ApiService {
   constructor(private http: HttpClient) {}
   private url: string =
-    'https://crudcrud.com/api/8808553d7b5341569e60e546b2fb8bd3';
+    'https://crudcrud.com/api/b8aa1d2671ee4a1baa3a807fa786d4a9';
   private path: string = '/annotations';
 
   create(annotation: FormGroup) {
@@ -19,5 +19,10 @@ export class ApiService {
   }
   getAll() {
     return this.http.get<Annotation[]>(this.url + this.path);
+  }
+  delete(annotationId: string) {
+    return this.http.delete<Annotation[]>(
+      `${this.url}${this.path}/${annotationId}`
+    );
   }
 }

@@ -32,4 +32,7 @@ export class TasksComponent implements OnInit, OnChanges {
       .getAll()
       .subscribe((response) => (this.arrtasks = response));
   }
+  onDelete(task: Annotation) {
+    this.apihandler.delete(task._id).subscribe((response) => this.loadTasks());
+  }
 }
