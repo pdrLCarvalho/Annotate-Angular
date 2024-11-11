@@ -1,7 +1,77 @@
-<section class="task-section">
-  <h1 class="filter-title">{{ title }}</h1>
-  <ul class="task-list">
-    <li class="task" *ngFor="let task of arrtasks">
+<section class="task-section" [ngSwitch]="routeFilter.getCurrentPage()">
+  <h1 class="filter-title">{{ routeFilter.getCurrentPage() }}</h1>
+  <ul class="task-list" *ngSwitchCase="Filters.Hoje">
+    <li class="task" *ngFor="let task of todayArr">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
+      </div>
+      <div class="date">
+        <input type="date" [value]="task.date" />
+      </div>
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+    </li>
+  </ul>
+  <ul class="task-list" *ngSwitchCase="Filters.Importante">
+    <li class="task" *ngFor="let task of importantArr">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
+      </div>
+      <div class="date">
+        <input type="date" [value]="task.date" />
+      </div>
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+    </li>
+  </ul>
+  <ul class="task-list" *ngSwitchCase="Filters.Compras">
+    <li class="task" *ngFor="let task of shopArr">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
+      </div>
+      <div class="date">
+        <input type="date" [value]="task.date" />
+      </div>
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+    </li>
+  </ul>
+  <ul class="task-list" *ngSwitchCase="Filters.Estudos">
+    <li class="task" *ngFor="let task of studyArr">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
+      </div>
+      <div class="date">
+        <input type="date" [value]="task.date" />
+      </div>
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+    </li>
+  </ul>
+  <ul class="task-list" *ngSwitchCase="Filters.Lazer">
+    <li class="task" *ngFor="let task of leisureArr">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
+      </div>
+      <div class="date">
+        <input type="date" [value]="task.date" />
+      </div>
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+    </li>
+  </ul>
+  <ul class="task-list" *ngSwitchCase="Filters.Trabalho">
+    <li class="task" *ngFor="let task of workArr">
       <div class="annotation">
         <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
