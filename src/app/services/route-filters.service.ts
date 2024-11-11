@@ -5,7 +5,7 @@ import { Filter } from '../models/filter';
   providedIn: 'root',
 })
 export class RouteFiltersService {
-  private currentPage: Filter = Filter.Importante;
+  private currentPage: Filter = Filter.Geral;
 
   constructor() {}
   getCurrentPage(): Filter {

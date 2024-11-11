@@ -1,5 +1,42 @@
 <section class="task-section" [ngSwitch]="routeFilter.getCurrentPage()">
   <h1 class="filter-title">{{ routeFilter.getCurrentPage() }}</h1>
+  <ul class="task-list" *ngSwitchCase="Filters.Geral">
+    <li class="task" *ngFor="let task of arrtasks">
+      <div class="annotation">
+        <input type="checkbox" class="task-check" />
+        <input class="annotation-input" type="text" [value]="task.annotation" />
+      </div>
+      <div class="date">
+        <input type="date" [value]="task.date" />
+      </div>
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
+        <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+      <button
+        *ngIf="editTaskId !== task._id"
+        class="task-edit-btn"
+        (pointerdown)="onEdit(task)"
+      >
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-save-btn"
+        (pointerdown)="saveEdit(task)"
+      >
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-cancel-btn"
+        (pointerdown)="cancelEdit()"
+      >
+        <img src="assets/cancel.svg" alt="Cancel" />
+      </button>
+    </li>
+  </ul>
   <ul class="task-list" *ngSwitchCase="Filters.Hoje">
     <li class="task" *ngFor="let task of todayArr">
       <div class="annotation">
@@ -11,6 +48,29 @@
       </div>
       <button class="task-delete-btn" (pointerdown)="onDelete(task)">
         <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+      <button
+        *ngIf="editTaskId !== task._id"
+        class="task-edit-btn"
+        (pointerdown)="onEdit(task)"
+      >
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-save-btn"
+        (pointerdown)="saveEdit(task)"
+      >
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-cancel-btn"
+        (pointerdown)="cancelEdit()"
+      >
+        <img src="assets/cancel.svg" alt="Cancel" />
       </button>
     </li>
   </ul>
@@ -26,6 +86,29 @@
       <button class="task-delete-btn" (pointerdown)="onDelete(task)">
         <img src="assets/delete.svg" alt="" srcset="" />
       </button>
+      <button
+        *ngIf="editTaskId !== task._id"
+        class="task-edit-btn"
+        (pointerdown)="onEdit(task)"
+      >
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-save-btn"
+        (pointerdown)="saveEdit(task)"
+      >
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-cancel-btn"
+        (pointerdown)="cancelEdit()"
+      >
+        <img src="assets/cancel.svg" alt="Cancel" />
+      </button>
     </li>
   </ul>
   <ul class="task-list" *ngSwitchCase="Filters.Compras">
@@ -39,6 +122,29 @@
       </div>
       <button class="task-delete-btn" (pointerdown)="onDelete(task)">
         <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+      <button
+        *ngIf="editTaskId !== task._id"
+        class="task-edit-btn"
+        (pointerdown)="onEdit(task)"
+      >
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-save-btn"
+        (pointerdown)="saveEdit(task)"
+      >
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-cancel-btn"
+        (pointerdown)="cancelEdit()"
+      >
+        <img src="assets/cancel.svg" alt="Cancel" />
       </button>
     </li>
   </ul>
@@ -54,6 +160,29 @@
       <button class="task-delete-btn" (pointerdown)="onDelete(task)">
         <img src="assets/delete.svg" alt="" srcset="" />
       </button>
+      <button
+        *ngIf="editTaskId !== task._id"
+        class="task-edit-btn"
+        (pointerdown)="onEdit(task)"
+      >
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-save-btn"
+        (pointerdown)="saveEdit(task)"
+      >
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-cancel-btn"
+        (pointerdown)="cancelEdit()"
+      >
+        <img src="assets/cancel.svg" alt="Cancel" />
+      </button>
     </li>
   </ul>
   <ul class="task-list" *ngSwitchCase="Filters.Lazer">
@@ -67,6 +196,29 @@
       </div>
       <button class="task-delete-btn" (pointerdown)="onDelete(task)">
         <img src="assets/delete.svg" alt="" srcset="" />
+      </button>
+      <button
+        *ngIf="editTaskId !== task._id"
+        class="task-edit-btn"
+        (pointerdown)="onEdit(task)"
+      >
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-save-btn"
+        (pointerdown)="saveEdit(task)"
+      >
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button
+        *ngIf="editTaskId === task._id"
+        class="task-cancel-btn"
+        (pointerdown)="cancelEdit()"
+      >
+        <img src="assets/cancel.svg" alt="Cancel" />
       </button>
     </li>
   </ul>

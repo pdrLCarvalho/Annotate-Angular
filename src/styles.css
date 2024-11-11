@@ -6,7 +6,9 @@
   --oceanBlue: #1a73e8;
   --border-list: #a3a3a3;
   --pale-red: #ff5a5a;
-  --pale-green: #b2e4b3;
+  --pale-green: #20ad22;
+  --violet: #9167d4;
+  --orange: #d1642d;
 }
 * {
   box-sizing: border-box;
