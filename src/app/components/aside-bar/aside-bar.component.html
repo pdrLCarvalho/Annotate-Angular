@@ -1,9 +1,7 @@
-<aside
-  class="aside-menu"
-  [ngClass]="{ open: menuIsOpen, contract: !menuIsOpen }"
->
+<aside class="aside-menu" [ngClass]="{ open: menuIsOpen, contract: !menuIsOpen }">
   <ul class="aside-list">
     <li class="aside-item">
+      <app-time></app-time>
       <div class="aside-account">
         <img class="account-img" src="assets/account.svg" alt="" srcset="" />
         <p class="account-user">{{ user }}</p>
