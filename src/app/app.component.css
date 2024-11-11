@@ -1,8 +1,7 @@
 .layout-container {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  /* height: 100vh; */
 }
 .layout-content {
   display: flex;
