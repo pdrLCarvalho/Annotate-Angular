@@ -32,6 +32,10 @@ input[type="date"]:focus,
 select:focus {
   outline: none;
 }
+select.ng-pristine.ng-invalid.ng-touched {
+  border: .5px solid rgba(54, 54, 54, 0.699);
+  padding: 2px 7px;
+}
 .alert {
   display: flex;
   justify-content: center;
