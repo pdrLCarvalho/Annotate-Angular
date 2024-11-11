@@ -9,7 +9,7 @@
       <div class="date">
         <input type="date" [value]="task.date" />
       </div>
-      <button class="task-delete-btn">
+      <button class="task-delete-btn" (pointerdown)="onDelete(task)">
         <img src="assets/delete.svg" alt="" srcset="" />
       </button>
     </li>
