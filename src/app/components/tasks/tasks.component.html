@@ -74,13 +74,32 @@
     <li class="task" *ngFor="let task of workArr">
       <div class="annotation">
         <input type="checkbox" class="task-check" />
-        <input class="annotation-input" type="text" [value]="task.annotation" />
+
+        <!-- Campo de edição da tarefa -->
+        <input *ngIf="editTaskId !== task._id" class="annotation-input" type="text" [value]="task.annotation"
+          readonly />
+        <input *ngIf="editTaskId === task._id" class="annotation-input" type="text" [(ngModel)]="editAnnotation" />
       </div>
+
       <div class="date">
-        <input type="date" [value]="task.date" />
+        <input *ngIf="editTaskId !== task._id" type="date" [value]="task.date" readonly />
+        <input *ngIf="editTaskId === task._id" type="date" [(ngModel)]="editDate" />
       </div>
+
       <button class="task-delete-btn" (pointerdown)="onDelete(task)">
-        <img src="assets/delete.svg" alt="" srcset="" />
+        <img src="assets/delete.svg" alt="Delete" />
+      </button>
+
+      <button *ngIf="editTaskId !== task._id" class="task-edit-btn" (pointerdown)="onEdit(task)">
+        <img src="assets/edit.svg" alt="Edit" />
+      </button>
+
+      <button *ngIf="editTaskId === task._id" class="task-save-btn" (pointerdown)="saveEdit(task)">
+        <img src="assets/save.svg" alt="Save" />
+      </button>
+
+      <button *ngIf="editTaskId === task._id" class="task-cancel-btn" (pointerdown)="cancelEdit()">
+        <img src="assets/cancel.svg" alt="Cancel" />
       </button>
     </li>
   </ul>
