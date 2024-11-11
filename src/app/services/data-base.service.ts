@@ -24,7 +24,7 @@ export class DataBaseService {
         compras: ["Comprar café", "Leite"]
       }]
      },
-    // { id: 2, name: 'Odair', email: 'odair@teste.com', password: 'senha123' },
+    { id: 2, name: 'Odair', email: 'odair@teste.com', password: 'senha123' },
     // { id: 1, name: 'Pedro', email: 'pedro@teste.com', password: 'senha123' },
     // { id: 2, name: 'Odair', email: 'odair@teste.com', password: 'senha123' },
   ]
