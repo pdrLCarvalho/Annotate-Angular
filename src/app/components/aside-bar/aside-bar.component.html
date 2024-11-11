@@ -1,4 +1,7 @@
-<aside class="aside-menu" [ngClass]="{ open: menuIsOpen, contract: !menuIsOpen }">
+<aside
+  class="aside-menu"
+  [ngClass]="{ open: menuIsOpen, contract: !menuIsOpen }"
+>
   <ul class="aside-list">
     <li class="aside-item">
       <app-time></app-time>
@@ -7,15 +10,16 @@
         <p class="account-user">{{ user }}</p>
       </div>
     </li>
+    <li class="aside-item" (click)="setPage(filters.Geral)">
+      <a href="#">Geral</a>
+    </li>
     <li class="aside-item" (click)="setPage(filters.Importante)">
       <a href="#">Importante</a>
     </li>
     <li class="aside-item" (click)="setPage(filters.Hoje)">
       <a href="#">Para hoje</a>
     </li>
-    <li class="aside-item">
-      <a href="#">Concluídas</a>
-    </li>
+
     <li class="aside-item" (click)="setPage(filters.Estudos)">
       <a href="#">Estudos</a>
     </li>

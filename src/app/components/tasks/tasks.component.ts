@@ -65,7 +65,6 @@ export class TasksComponent implements OnInit, OnChanges {
           this.importantArr = this.filterArray(response, Filter.Importante);
           this.studyArr = this.filterArray(response, Filter.Estudos);
           this.workArr = this.filterArray(response, Filter.Trabalho);
-          console.log(response);
 
           this.shopArr = this.filterArray(response, Filter.Compras);
           this.leisureArr = this.filterArray(response, Filter.Lazer);
@@ -100,6 +99,12 @@ export class TasksComponent implements OnInit, OnChanges {
         data.getMonth === today.getMonth &&
         data.getFullYear === today.getFullYear
       ) {
+        console.log(
+          data.getDay === today.getDay &&
+            data.getMonth === today.getMonth &&
+            data.getFullYear === today.getFullYear
+        );
+
         newArray.push(item);
       }
     });
