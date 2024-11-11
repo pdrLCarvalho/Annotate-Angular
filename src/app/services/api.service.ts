@@ -7,14 +7,11 @@ import { Annotation } from '../models/annotation';
   providedIn: 'root',
 })
 export class ApiService {
-
   constructor(private http: HttpClient) {}
   private url: string =
     'https://crudcrud.com/api/e9c8897eeb034b45ad6640a50cc99203';
 
   private path: string = '/annotations';
-
-  constructor(private http: HttpClient) {}
 
   create(annotation: FormGroup) {
     const payload = annotation.getRawValue();
@@ -26,7 +23,9 @@ export class ApiService {
   }
 
   delete(annotationId: string) {
-    return this.http.delete<Annotation[]>(`${this.url}${this.path}/${annotationId}`);
+    return this.http.delete<Annotation[]>(
+      `${this.url}${this.path}/${annotationId}`
+    );
   }
 
   // Novo método de atualização
@@ -37,4 +36,3 @@ export class ApiService {
     );
   }
 }
-

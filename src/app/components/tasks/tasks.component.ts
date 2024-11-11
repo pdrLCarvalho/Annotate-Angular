@@ -1,4 +1,3 @@
-
 import {
   Component,
   Input,
@@ -19,7 +18,6 @@ import { RouteFiltersService } from 'src/app/services/route-filters.service';
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent implements OnInit, OnChanges {
-
   constructor(
     private apihandler: ApiService,
     public routeFilter: RouteFiltersService
@@ -40,7 +38,6 @@ export class TasksComponent implements OnInit, OnChanges {
   editAnnotation: string = '';
   editDate: Date = new Date();
 
-
   ngOnInit(): void {
     this.loadTasks();
     this.loadFilteredTasks();
@@ -54,7 +51,9 @@ export class TasksComponent implements OnInit, OnChanges {
   }
 
   loadTasks() {
-    this.apihandler.getAll().subscribe((response) => (this.arrtasks = response));
+    this.apihandler
+      .getAll()
+      .subscribe((response) => (this.arrtasks = response));
   }
 
   loadFilteredTasks() {
@@ -105,7 +104,7 @@ export class TasksComponent implements OnInit, OnChanges {
       }
     });
     return newArray;
-
+  }
   onEdit(task: Annotation) {
     this.editTaskId = task._id;
     this.editAnnotation = task.annotation;
@@ -117,7 +116,7 @@ export class TasksComponent implements OnInit, OnChanges {
       _id: task._id,
       annotation: this.editAnnotation,
       date: this.editDate,
-      filter: task.filter // Certifique-se de que `filter` é incluído
+      filter: task.filter, // Certifique-se de que `filter` é incluído
     };
 
     this.apihandler.update(task._id, updatedAnnotation).subscribe(() => {
@@ -130,6 +129,5 @@ export class TasksComponent implements OnInit, OnChanges {
     this.editTaskId = null;
     this.editAnnotation = '';
     this.editDate = new Date();
-
   }
 }
