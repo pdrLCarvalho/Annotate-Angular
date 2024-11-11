@@ -2,10 +2,10 @@
   display: inline-block;
   background-color: var(--aside-bar);
   position: relative;
-  height: 100vh;
 }
 .contract {
   width: 40px;
+  height: 100vh;
 }
 .contract > .aside-list {
   display: none;
@@ -46,7 +46,6 @@
 .open > .aside-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 .aside-account {
   display: flex;
@@ -60,7 +59,7 @@
 }
 .aside-item {
   list-style: none;
-  padding: 4px 22px;
+  padding: 32px 22px;
   cursor: pointer;
 }
 .aside-item a {

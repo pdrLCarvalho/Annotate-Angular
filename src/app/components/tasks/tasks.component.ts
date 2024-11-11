@@ -13,7 +13,7 @@ import { ApiService } from 'src/app/services/api.service';
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css'],
 })
-export class TasksComponent implements OnInit {
+export class TasksComponent implements OnInit, OnChanges {
   constructor(private apihandler: ApiService) {}
   @Input() title: string = 'Título do Filtro';
   @Input() refresh: number = 0;
