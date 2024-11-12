@@ -9,7 +9,7 @@ import { Annotation } from '../models/annotation';
 export class ApiService {
   constructor(private http: HttpClient) {}
   private url: string =
-    'https://crudcrud.com/api/4956fbb4d2034a8ab357d9dd7698080d';
+    'https://crudcrud.com/api/473dd5d5743a40869f68a4a92c9b2e8f';
 
   private path: string = '/annotations';
 
