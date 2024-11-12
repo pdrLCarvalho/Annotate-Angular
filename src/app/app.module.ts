@@ -9,11 +9,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsideBarComponent } from './components/aside-bar/aside-bar.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TasksAreaComponent } from './components/tasks-area/tasks-area.component';
+
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TasksComponent } from './components/tasks/tasks.component';
-import { TaksBarComponent } from './components/taks-bar/taks-bar.component';
+
 import { TimeComponent } from './components/time/time.component';
 
 @NgModule({
@@ -24,10 +24,9 @@ import { TimeComponent } from './components/time/time.component';
     AddTaskComponent,
     MainComponent,
     HeaderComponent,
-    TasksAreaComponent,
+
     SignUpComponent,
     TasksComponent,
-    TaksBarComponent,
     TimeComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],

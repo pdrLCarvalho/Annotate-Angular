@@ -3,7 +3,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Geral">
     <li class="task" *ngFor="let task of arrtasks">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
@@ -40,7 +39,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Hoje">
     <li class="task" *ngFor="let task of todayArr">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
@@ -77,7 +75,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Importante">
     <li class="task" *ngFor="let task of importantArr">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
@@ -114,7 +111,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Compras">
     <li class="task" *ngFor="let task of shopArr">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
@@ -151,7 +147,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Estudos">
     <li class="task" *ngFor="let task of studyArr">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
@@ -188,7 +183,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Lazer">
     <li class="task" *ngFor="let task of leisureArr">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
         <input class="annotation-input" type="text" [value]="task.annotation" />
       </div>
       <div class="date">
@@ -225,8 +219,6 @@
   <ul class="task-list" *ngSwitchCase="Filters.Trabalho">
     <li class="task" *ngFor="let task of workArr">
       <div class="annotation">
-        <input type="checkbox" class="task-check" />
-
         <!-- Campo de edição da tarefa -->
         <input
           *ngIf="editTaskId !== task._id"
